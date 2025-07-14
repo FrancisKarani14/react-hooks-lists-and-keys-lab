@@ -1,6 +1,23 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
 import ProjectItem from "../components/ProjectItem";
+import React from 'react'
+
+function ProjectItem({ name, about, technologies }) {
+  return (
+    <div>
+      <h3>{name}</h3>
+      <p>{about}</p>
+      <div>
+        {technologies?.map((tech) => (
+  <span key={tech}>{tech}</span>
+))}
+
+      </div>
+    </div>
+  );
+}
+
 
 const project = {
   id: 1,
@@ -38,3 +55,6 @@ test("renders a <span> for each technology passed in as a prop", () => {
     expect(span.tagName).toBe("SPAN");
   }
 });
+
+
+export default ProjectItem;
