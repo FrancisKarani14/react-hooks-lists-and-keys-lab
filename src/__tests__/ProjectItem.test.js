@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import ProjectItem from "../components/ProjectItem";
+// import ProjectItem from "../components/ProjectItem";
 import React from 'react'
 
 function ProjectItem({ name, about, technologies }) {
